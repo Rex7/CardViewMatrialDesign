@@ -5,7 +5,7 @@
     <TextView
         android:id="@+id/myName"
         android:textSize="22sp"
-
+        android:layout_centerInParent="true"
         android:text="My Name is "
 
         android:layout_width="wrap_content"
