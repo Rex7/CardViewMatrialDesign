@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CardViewMatrialDesign</string>
+    <string name="user_name">Regis Charles</string>
+    <string name="designation">Software developer</string>
+    <string name="image">Image</string>
+    <string name="terms">Agree to terms and conditions specified by the comapany</string>
+    <string name="appbar">appbar</string>
+    <string name="cardview">CardView</string>
+    <string name="fab">Fab</string>
+    <string name="cal">Calculator</string>
+    <string name="snackbar">SnackBar</string>
+
+</resources>

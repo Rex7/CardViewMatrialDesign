@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.example.regis.cardviewmatrialdesign.MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <android.support.v7.widget.CardView
+          android:id="@+id/cardview"
+          app:cardCornerRadius="@dimen/cardview_compat_inset_shadow"
+          app:cardElevation="8dp"
+          android:layout_height="300dp"
+          android:layout_width="match_parent">
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+              <ImageView
+                  android:src="@drawable/mysimpleimage"
+                  android:layout_width="match_parent"
+                  android:layout_height="248dp"
+                  android:scaleType="centerCrop"/>
+              <TextView
+
+                  android:text="Welcome to the medical reference system  kindly register"
+                  android:textColor="#000"
+
+                  android:gravity="center_vertical"
+                  android:textSize="15sp"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent" />
+
+          </LinearLayout>
+
+
+
+
+      </android.support.v7.widget.CardView>
+        <EditText
+            android:id="@+id/firstName"
+            android:inputType="text"
+            android:hint="First Name"
+            android:textSize="22sp"
+
+            android:gravity="center"
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+          />
+        <EditText
+            android:id="@+id/lastName"
+            android:inputType="text"
+            android:hint="Last Name"
+            android:textSize="22sp"
+            android:gravity="center"
+
+            android:layout_height="80dp"
+            android:layout_width="match_parent"
+     />
+        <EditText
+            android:id="@+id/password"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+           android:gravity="center"
+            android:layout_height="80dp" />
+
+        <EditText
+            android:hint="Confirm password"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="80dp" />
+        <EditText
+           android:hint="email id"
+            android:textSize="22sp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="80dp" />
+        <EditText
+            android:hint="re-enter emaildId"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:layout_height="80dp" />
+        <CheckBox
+            android:text="@string/terms"
+            android:textSize="18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/register"
+            android:text="Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>

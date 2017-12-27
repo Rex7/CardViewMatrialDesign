@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/cardview_dark_background"
+    tools:context="com.example.regis.cardviewmatrialdesign.Selection">
+    <include
+        android:id="@+id/selectionAppbar"
+        layout="@layout/appbar"/>
+
+    <Button
+        android:id="@+id/appbar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/appbar"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        />
+
+    <Button
+        android:id="@+id/snacknar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/snackbar"
+
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/fab"
+
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/fab"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/cardview"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cardview"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <Button
+        android:id="@+id/calculator"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:text="@string/cal" />
+    <Button
+        android:id="@+id/fragment"
+        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:text="Fragment"
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        />
+</LinearLayout>
