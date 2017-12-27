@@ -3,6 +3,8 @@ package com.example.regis.cardviewmatrialdesign;
 import android.os.Bundle;
 
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -15,22 +17,29 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 
-public class AppbarDemo extends AppCompatActivity {
-    EditText input;
-    Button button;
+public class AppbarDemo extends AppCompatActivity implements messanger {
+
+    FragmentManager fragmentManager;
+    fragmentTwo fragmentTwo;
     Toolbar toolbar;
     TabLayout tablayout;
+    ViewPager viewPager;
+    MyAdapter myAdapter;
 
 
     public void onCreate(Bundle saved) {
         super.onCreate(saved);
         setContentView(R.layout.appbardemo);
         toolbar = (Toolbar) findViewById(R.id.appbar);
-        tablayout=(TabLayout)findViewById(R.id.tab);
+        tablayout = (TabLayout) findViewById(R.id.tab);
         tablayout.addTab(tablayout.newTab().setText("Tab1"));
         tablayout.addTab(tablayout.newTab().setText("Tab2"));
-        tablayout.addTab(tablayout.newTab().setText("Tab3"));
+
         setSupportActionBar(toolbar);
+        myAdapter = new MyAdapter(getSupportFragmentManager());
+        viewPager = (ViewPager) findViewById(R.id.viewPager);
+        viewPager.setAdapter(myAdapter);
+        tablayout.setupWithViewPager(viewPager);
 
 
     }
@@ -62,6 +71,14 @@ public class AppbarDemo extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void sendData(String data) {
+        fragmentManager = getSupportFragmentManager();
+        String tag = "android:switcher:" + R.id.viewPager + ":" + 1;
+        fragmentTwo = (fragmentTwo) fragmentManager.findFragmentByTag(tag);
+        fragmentTwo.displayName(data);
     }
 }
 
