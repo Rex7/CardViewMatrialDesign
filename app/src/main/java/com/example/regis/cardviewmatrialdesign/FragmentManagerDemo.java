@@ -13,13 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 public class FragmentManagerDemo extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     Toolbar toolbar;
     FragmentManager fragmentManager;
-    Fragment fragment;
+    Fragment fragment = null;
     FrameLayout frameLayout;
     DrawerLayout drwaerLayout;
     ActionBarDrawerToggle actionBarDrawerToggle;
@@ -43,6 +42,10 @@ public class FragmentManagerDemo extends AppCompatActivity implements Navigation
         drwaerLayout.addDrawerListener(actionBarDrawerToggle);
     }
 
+    public void setTitleName(String Title) {
+        getSupportActionBar().setTitle(Title);
+    }
+
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
@@ -54,35 +57,18 @@ public class FragmentManagerDemo extends AppCompatActivity implements Navigation
         int id = item.getItemId();
         switch (id) {
             case R.id.fragOne:
-                if (frameLayout != null) {
-                    Toast.makeText(getApplicationContext(), "Iam in if of fragOne", Toast.LENGTH_LONG).show();
-                    fragmentManager.beginTransaction()
-                            .replace(R.id.myContainer, new fragmentOne())
-                            .addToBackStack(null)
-                            .commit();
-                } else {
-                    Toast.makeText(getApplicationContext(), "Iam in else of fragOne", Toast.LENGTH_LONG).show();
-                    fragmentManager.beginTransaction()
-                            .add(R.id.myContainer, new fragmentOne())
-                            .addToBackStack(null)
-                            .commit();
-                }
+                fragment = new fragmentOne();
                 break;
             case R.id.fragTwo:
-                if (frameLayout != null) {
-                    Toast.makeText(getApplicationContext(), "Iam in if of fragTwo", Toast.LENGTH_LONG).show();
-                    fragmentManager.beginTransaction()
-                            .replace(R.id.myContainer, new fragmentTwo())
-                            .addToBackStack(null)
-                            .commit();
-                } else {
-                    Toast.makeText(getApplicationContext(), "Iam in if of fragTwo", Toast.LENGTH_LONG).show();
-                    fragmentManager.beginTransaction()
-                            .add(R.id.myContainer, new fragmentTwo())
-                            .addToBackStack(null)
-                            .commit();
-                }
+                fragment = new fragmentTwo();
                 break;
+
+        }
+        if (fragment != null) {
+            fragmentManager.beginTransaction()
+                    .add(R.id.myContainer, fragment)
+                    .addToBackStack(null)
+                    .commit();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer);
         drawer.closeDrawer(GravityCompat.START);

@@ -26,9 +26,6 @@
             android:name=".Fab"
             android:label="FLoating Action Button" />
         <activity
-            android:name=".SnackbarDemo"
-            android:label="@string/snackbar" />
-        <activity
             android:name=".CalculatorDemo"
             android:label="@string/cal"
             android:windowSoftInputMode="stateAlwaysHidden" />
@@ -40,13 +37,15 @@
         </activity>
         <activity android:name=".LoginDemo" />
         <activity android:name=".Register" />
-        <activity android:name=".FragmentManagerDemo"></activity>
-        <activity android:name=".RecyclerViewDemo">
+        <activity android:name=".FragmentManagerDemo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".RecyclerViewDemo">
+
         </activity>
     </application>
 

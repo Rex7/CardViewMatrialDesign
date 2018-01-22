@@ -1,9 +1,9 @@
 package com.example.regis.cardviewmatrialdesign;
 
-import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,6 +26,7 @@ private EditText enterName;
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         enterName=(EditText)view.findViewById(R.id.enterName);
+        ((FragmentManagerDemo) getActivity()).setTitleName("Fragment One");
         submit=(Button)view.findViewById(R.id.submit);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +43,8 @@ private EditText enterName;
         super.onAttach(context);
         try{
             message=(messanger) context;
+
+
         }
         catch(ClassCastException cl){
 

@@ -23,7 +23,7 @@ Button appbar,snackbar,fab,cardview,calculator,fragment;
         setContentView(R.layout.activity_selection);
         appbar=(Button)findViewById(R.id.appbar);
         fab=(Button)findViewById(R.id.fab);
-        snackbar=(Button)findViewById(R.id.snacknar);
+
         cardview=(Button)findViewById(R.id.cardview);
         calculator=(Button)findViewById(R.id.calculator);
         fragment=(Button)findViewById(R.id.fragment) ;
@@ -36,7 +36,7 @@ Button appbar,snackbar,fab,cardview,calculator,fragment;
         fragment.setOnClickListener(this);
         calculator.setOnClickListener(this);
         appbar.setOnClickListener(this);
-        snackbar.setOnClickListener(this);
+
         cardview.setOnClickListener(this);
         fab.setOnClickListener(this);
         toolbar=(Toolbar)findViewById(R.id.appBar);
@@ -69,10 +69,7 @@ Button appbar,snackbar,fab,cardview,calculator,fragment;
                 intent=new Intent(this,AppbarDemo.class);
                 startActivity(intent);
                 break;
-            case R.id.snacknar:
-                intent=new Intent(this,SnackbarDemo.class);
-                startActivity(intent);
-                break;
+
             case R.id.fab:
                 intent=new Intent(this, Fab.class);
                 startActivity(intent);
