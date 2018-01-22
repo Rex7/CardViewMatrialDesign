@@ -66,7 +66,7 @@ public class FragmentManagerDemo extends AppCompatActivity implements Navigation
         }
         if (fragment != null) {
             fragmentManager.beginTransaction()
-                    .add(R.id.myContainer, fragment)
+                    .replace(R.id.myContainer, fragment)
                     .addToBackStack(null)
                     .commit();
         }
