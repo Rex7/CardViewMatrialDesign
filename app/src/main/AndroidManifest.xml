@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.regis.cardviewmatrialdesign">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,40 +12,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".AppbarDemo"
-            android:label="appbar demo" />
+            android:label="Material Design" />
         <activity
             android:name=".MaterialDesign"
             android:label="Cardview Demo" />
         <activity
             android:name=".Selection"
-            android:label="Simple">
+            android:label="Simple"></activity>
+        <activity
+            android:name=".Fab"
+            android:label="FLoating Action Button" />
+        <activity
+            android:name=".SnackbarDemo"
+            android:label="@string/snackbar" />
+        <activity
+            android:name=".CalculatorDemo"
+            android:label="@string/cal"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".FragmentDemo"
+            android:label="Fragment" />
+        <activity android:name=".ListDemo">
+
+        </activity>
+        <activity android:name=".LoginDemo" />
+        <activity android:name=".Register" />
+        <activity android:name=".FragmentManagerDemo"></activity>
+        <activity android:name=".RecyclerViewDemo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Fab"
-            android:label="FLoating Action Button" />
-        <activity
-            android:name=".SnackbarDemo"
-            android:label="@string/snackbar">
-
-        </activity>
-        <activity
-            android:name=".CalculatorDemo"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:label="@string/cal">
-
-        </activity>
-        <activity android:name=".FragmentDemo"
-            android:label="Fragment"/>
     </application>
 
 </manifest>

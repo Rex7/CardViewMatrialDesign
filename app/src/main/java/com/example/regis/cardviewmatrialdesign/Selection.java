@@ -1,15 +1,21 @@
 package com.example.regis.cardviewmatrialdesign;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 
 public class Selection extends AppCompatActivity  implements View.OnClickListener {
 Button appbar,snackbar,fab,cardview,calculator,fragment;
+    String[] array, myName = {"regis", "charles", "anthony"};
+    Spinner spinner;
     Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +27,12 @@ Button appbar,snackbar,fab,cardview,calculator,fragment;
         cardview=(Button)findViewById(R.id.cardview);
         calculator=(Button)findViewById(R.id.calculator);
         fragment=(Button)findViewById(R.id.fragment) ;
+        spinner = (Spinner) findViewById(R.id.selectSpinner);
+
+        array = getResources().getStringArray(R.array.select);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, array);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(arrayAdapter);
         fragment.setOnClickListener(this);
         calculator.setOnClickListener(this);
         appbar.setOnClickListener(this);
@@ -29,6 +41,21 @@ Button appbar,snackbar,fab,cardview,calculator,fragment;
         fab.setOnClickListener(this);
         toolbar=(Toolbar)findViewById(R.id.appBar);
         setSupportActionBar(toolbar);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 1) {
+                    startActivity(new Intent(getApplicationContext(), ListDemo.class));
+                } else if (position == 2) {
+                    startActivity(new Intent(getApplicationContext(), LoginDemo.class));
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
 
     }

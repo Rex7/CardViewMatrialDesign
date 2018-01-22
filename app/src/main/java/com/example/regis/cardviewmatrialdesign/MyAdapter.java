@@ -18,7 +18,11 @@ public class MyAdapter extends FragmentPagerAdapter {
    if(position==0){
        fragment=new fragmentOne();
        return  fragment;
+   } else if (position == 1) {
+       fragment = new fragmentTwo();
+       return fragment;
    }
+
    else {
        fragment=new fragmentTwo();
        return fragment;
@@ -28,7 +32,7 @@ public class MyAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return 3;
     }
 
     @Override
@@ -38,6 +42,8 @@ public class MyAdapter extends FragmentPagerAdapter {
         }
         else  if (position==1){
             return new String("movies");
+        } else if (position == 2) {
+            return new String("CardView");
         }
         return new String("");
     }

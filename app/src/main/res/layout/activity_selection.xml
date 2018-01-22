@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="@string/appbar"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="20dp"
         />
 
     <Button
@@ -64,4 +64,17 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"
         />
+
+    <Spinner
+        android:id="@+id/selectSpinner"
+
+        android:layout_width="150dp"
+        style="@android:style/Widget.DeviceDefault.Light.DropDownItem.Spinner"
+        android:prompt="@string/Activity"
+        app:popupTheme="@color/colorPrimary"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_height="50dp">
+
+    </Spinner>
 </LinearLayout>

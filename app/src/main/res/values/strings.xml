@@ -9,5 +9,34 @@
     <string name="fab">Fab</string>
     <string name="cal">Calculator</string>
     <string name="snackbar">SnackBar</string>
+    <string name="Activity">Activity</string>
+    <string-array name="days">
+        <item>Sunday</item>
+        <item>monday</item>
+        <item>tuesday</item>
+        <item>wednesday</item>
+        <item>thursday</item>
+        <item>friday</item>
+        <item>saturday</item>
+    </string-array>
+    <string-array name="select">
+        <item>Choose Activity</item>
+        <item>List</item>
+        <item>Sonny</item>
 
+    </string-array>
+    <string-array name="names">
+        <item>Regis</item>
+        <item>Jenifer</item>
+        <item>Charles</item>
+        <item>John</item>
+    </string-array>
+    <string-array name="age">
+        <item>25</item>
+        <item>23</item>
+        <item>20</item>
+        <item>18</item>
+    </string-array>
+    <string name="open">open</string>
+    <string name="close">close</string>
 </resources>
